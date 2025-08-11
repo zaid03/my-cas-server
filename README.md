@@ -1,5 +1,14 @@
-# IMPORTANT NOTE<br/>******************************************************<br/>This repository is always automatically generated from the [CAS Initializr](https://github.com/apereo/cas-initializr). Do NOT submit pull requests here as the change-set will be overwritten on the next sync. To learn more, please visit the [CAS documentation](https://apereo.github.io/cas).<br/>******************************************************<br/>
-Apereo CAS WAR Overlay Template
+# My Custom CAS Server
+
+This is my customized CAS (Central Authentication Service) server based on the Apereo CAS WAR Overlay Template. 
+
+## Customizations Made:
+- ✅ Configured for Java 17 (instead of Java 11)
+- ✅ Updated Spring Boot and dependencies compatibility
+- ✅ Ready for custom UI themes and frontend modifications
+
+Original template from: [Apereo CAS Overlay Template](https://github.com/apereo/cas-overlay-template)
+
 =====================================
 
 WAR Overlay Type: `cas-overlay`
@@ -8,7 +17,7 @@ WAR Overlay Type: `cas-overlay`
    
 
 - CAS Server `6.6.15.2`
-- JDK `11`
+- JDK `17` (Customized from original JDK 11)
                      
 # Build
 
