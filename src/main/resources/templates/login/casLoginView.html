@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <title th:text="#{cas.login.pagetitle}">My Custom Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .test{
+            text-align: center;
+            padding: 10px;
+            font-family: "Raleway", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            
+        }
+    </style>
+</head>
+
+<body class="my-custom-login">
+<div layout:fragment="content" class="d-flex justify-content-center align-items-center">
+    
+    <!-- YOUR CUSTOM DESIGN GOES HERE -->
+    <div class="login-card">
+        <h2 class="test">Ingrese el nombre de usuario y la contraseña</h2>
+        
+        <!-- CRITICAL: Keep this fragment - it contains the actual login form logic -->
+        <div th:replace="fragments/loginform :: loginform">
+            Login form goes here
+        </div>
+        
+        <!-- CRITICAL: Keep this section for external providers if needed -->
+        <section th:if="${delegatedAuthenticationProviderConfigurations}">
+            <div th:replace="fragments/loginProviders :: loginProviders">
+                External providers go here
+            </div>
+        </section>
+    </div>
+    
+</div>
+</body>
+</html>

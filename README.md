@@ -1,8 +1,9 @@
 # My Custom CAS Server
 
-This is my customized CAS (Central Authentication Service) server based on the Apereo CAS WAR Overlay Template. 
+This is my customized CAS (Central Authentication Service) server based on the Apereo CAS WAR Overlay Template.
 
 ## Customizations Made:
+
 - ✅ Configured for Java 17 (instead of Java 11)
 - ✅ Updated Spring Boot and dependencies compatibility
 - ✅ Ready for custom UI themes and frontend modifications
@@ -14,11 +15,10 @@ Original template from: [Apereo CAS Overlay Template](https://github.com/apereo/
 WAR Overlay Type: `cas-overlay`
 
 # Versions
-   
 
 - CAS Server `6.6.15.2`
 - JDK `17` (Customized from original JDK 11)
-                     
+
 # Build
 
 To build the project, use:
@@ -53,7 +53,7 @@ This can either be done using the JDK's `keytool` utility or via the following c
 ./gradlew[.bat] createKeystore
 ```
 
-Use the password `changeit` for both the keystore and the key/certificate entries. 
+Use the password `changeit` for both the keystore and the key/certificate entries.
 Ensure the keystore is loaded up with keys and certificates of the server.
 
 ## Extension Modules
@@ -71,15 +71,13 @@ To collect the list of all project modules and dependencies in the overlay:
 
 ```bash
 ./gradlew[.bat] dependencies
-```                                                                       
+```
 
 # Deployment
 
 On a successful deployment via the following methods, the server will be available at:
 
-
-* `https://localhost:8443/cas`
-
+- `https://localhost:8443/cas`
 
 ## Executable WAR
 
@@ -114,14 +112,14 @@ Debug the CAS web application as an executable WAR:
 ```bash
 ./gradlew[.bat] debug
 ```
-       
+
 Or via:
 
 ```bash
 java -Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=y -jar build/libs/cas.war
 ```
 
-Run the CAS web application as a *standalone* executable WAR:
+Run the CAS web application as a _standalone_ executable WAR:
 
 ```bash
 ./gradlew[.bat] clean executable
@@ -182,10 +180,9 @@ using system properties via `-DdockerUsername=...` and `-DdockerPassword=...`.
 
 A `docker-compose.yml` is also provided to orchestrate the build:
 
-```bash  
+```bash
 docker-compose build
 ```
-
 
 # CAS Command-line Shell
 
@@ -227,11 +224,11 @@ The generated directory structure should match the following:
         └── fragments
 ```
 
-HTML templates and fragments can be moved into the above directory structure, 
+HTML templates and fragments can be moved into the above directory structure,
 and the theme may be assigned to applications for use.
 
 # List Overlay Resources
- 
+
 To list all available CAS views and templates:
 
 ```bash
@@ -256,12 +253,12 @@ To unzip and explode the CAS web application file and the internal resources jar
 
 ## Configuration Metadata
 
-Configuration metadata allows you to export collection of CAS properties as a report into a file 
+Configuration metadata allows you to export collection of CAS properties as a report into a file
 that can later be examined. You will find a full list of CAS settings along with notes, types, default and accepted values:
 
 ```bash
 ./gradlew exportConfigMetadata
-```                           
+```
 
 # Puppeteer
 
@@ -287,7 +284,6 @@ The following defaults are assumed:
 - The CAS overlay is prepped with an embedded server container, such as Apache Tomcat.
 
 You may of course need to make adjustments to account for your specific environment and deployment settings, URLs, etc.
-
 
 # Duct
 
@@ -330,7 +326,6 @@ You may also supply the following options:
 - `duct.duration`: Number of seconds, i.e. `30` to execute the scenario.
 - `duct.count`: Number of iterations, i.e. `5` to execute the scenario.
 
-
 # OpenRewrite
 
 [OpenRewrite](https://docs.openrewrite.org/) is a tool used by the CAS in form of a Gradle plugin
@@ -345,7 +340,7 @@ scripts called `Recipes` that are automatically packaged and presented to the bu
 **NOTE:** All CAS specific recipes begin with `org.apereo.cas`. The `targetVersion` must be the CAS version to which you want to upgrade.
 
 OpenRewrite recipes make minimally invasive changes to your CAS build allowing you to upgrade from one version
-to the next with minimal effort. The recipe contains *almost* everything that is required for a CAS build system to navigate
+to the next with minimal effort. The recipe contains _almost_ everything that is required for a CAS build system to navigate
 from one version to other and automated tedious aspects of the upgrade such as finding the correct versions of CAS,
 relevant libraries and plugins as well as any possible structural changes to one's CAS build.
 
