@@ -1,0 +1,8 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "http://localhost:4200/.*",
+  "name": "Angular Local Dev",
+  "id": 1,
+  "description": "Local Angular app for CAS integration",
+  "evaluationOrder": 1
+}

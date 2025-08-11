@@ -255,6 +255,9 @@ dependencies {
     **/
     implementation enforcedPlatform("org.apereo.cas:cas-server-support-bom:${project.'cas.version'}")
     implementation platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+    implementation "org.apereo.cas:cas-server-support-rest"
+    implementation "org.apereo.cas:cas-server-support-jdbc"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 
     /**
      * Do NOT modify the lines below or else you will risk breaking the build.
