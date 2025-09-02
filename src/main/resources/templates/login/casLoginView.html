@@ -5,7 +5,7 @@
     <title th:text="#{cas.login.pagetitle}">My Custom Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .test{
+        .mensaje-de-bienvenida{
             text-align: center;
             padding: 10px;
             font-family: "Raleway", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -19,7 +19,7 @@
     
     <!-- YOUR CUSTOM DESIGN GOES HERE -->
     <div class="login-card">
-        <h2 class="test">Ingrese el nombre de usuario y la contraseña</h2>
+        <h2 class="mensaje-de-bienvenida">Ingrese el nombre de usuario y la contraseña</h2>
         
         <!-- CRITICAL: Keep this fragment - it contains the actual login form logic -->
         <div th:replace="fragments/loginform :: loginform">
